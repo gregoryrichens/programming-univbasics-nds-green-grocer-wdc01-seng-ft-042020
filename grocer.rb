@@ -69,7 +69,7 @@ def apply_coupons(cart, coupons)
     end 
     cart_index += 1
   end
-  binding.pry
+  puts coupon_cart
   coupon_cart
 end
 
