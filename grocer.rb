@@ -11,7 +11,6 @@ def find_item_by_name_in_collection(name, collection = ["0"])
 end
 
 def consolidate_cart(cart)
-  puts "original cart #{cart}" 
   consolidated_cart = []
   cart_index = 0
   while cart_index < cart.length do
@@ -22,13 +21,14 @@ def consolidate_cart(cart)
     while consolidated_index < (consolidated_cart.length - 1) do
       if (consolidated_cart.length > 1 && consolidated_cart[consolidated_index][:item] == consolidated_cart.last[:item])
         consolidated_cart[consolidated_index][:count] += 1 
+        puts "cart_index #{cart_index}"
+        puts "consolidated_cart #{consolidated_cart}"
         consolidated_cart.pop
       end
       consolidated_index += 1
     end 
     cart_index += 1 
   end
-  puts "consolidated cart #{consolidated_cart}"
   consolidated_cart
 end 
 
