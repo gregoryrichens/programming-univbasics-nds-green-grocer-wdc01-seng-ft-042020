@@ -16,6 +16,7 @@ def consolidate_cart(cart)
   while cart_index < cart.length do
     new_hash = cart[cart_index]
     new_hash[:count] = 1   
+    puts "consolidated cart pre push #{consolidated_cart}"
     consolidated_cart << new_hash
     consolidated_index = 0
     while consolidated_index < (consolidated_cart.length - 1) do
