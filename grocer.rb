@@ -27,6 +27,7 @@ def consolidate_cart(cart)
     end 
     cart_index += 1 
   end
+  puts "consolidated cart #{consolidated_cart}"
   consolidated_cart
 end 
 
