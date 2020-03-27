@@ -17,7 +17,7 @@ def consolidate_cart(cart)
     new_hash = cart[cart_index]
     new_hash[:count] = 1   
     puts "consolidated cart pre push #{consolidated_cart}"
-    consolidated_cart << new_hash
+    consolidated_cart << new_hash.dup
     consolidated_index = 0
     while consolidated_index < (consolidated_cart.length - 1) do
       if (consolidated_cart.length > 1 && consolidated_cart[consolidated_index][:item] == consolidated_cart.last[:item])
