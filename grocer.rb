@@ -11,6 +11,7 @@ def find_item_by_name_in_collection(name, collection = ["0"])
 end
 
 def consolidate_cart(cart)
+  puts "original cart #{cart}" 
   consolidated_cart = []
   cart_index = 0
   while cart_index < cart.length do
