@@ -13,26 +13,21 @@ end
 def consolidate_cart(cart)
   consolidated_cart = []
   cart_index = 0
+  value = 0 
   while cart_index < cart.length do
     new_hash = cart[cart_index]
-    new_hash[:count] = 1   
-    puts "consolidated cart pre push #{consolidated_cart}"
-    consolidated_cart << new_hash.dup
+    new_hash[:count] = 1
+    consolidated_cart << new_hash.dup 
     consolidated_index = 0
     while consolidated_index < (consolidated_cart.length - 1) do
       if (consolidated_cart.length > 1 && consolidated_cart[consolidated_index][:item] == consolidated_cart.last[:item])
-        puts "consolidated index #{consolidated_index}"
-        puts "consolidated_cart #{consolidated_cart}"
-        puts "cart_index #{cart_index}"
         consolidated_cart[consolidated_index][:count] += 1 
-        
         consolidated_cart.pop
-        puts "consolidated_cart #{consolidated_cart}"
       end
       consolidated_index += 1
     end 
-    puts "consolidated cart end loop #{consolidated_cart}"
-    cart_index += 1 
+    cart_index += 1
+     
   end
   consolidated_cart
 end 
@@ -41,7 +36,6 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  puts "cart #{cart}"
   
   #new array for items after coupon application
   coupon_cart = []
