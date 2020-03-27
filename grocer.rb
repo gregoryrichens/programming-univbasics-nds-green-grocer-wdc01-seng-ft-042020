@@ -35,7 +35,6 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   puts "cart #{cart}"
-  puts "coupons #{coupons}"
   
   #new array for items after coupon application
   coupon_cart = []
@@ -70,7 +69,6 @@ def apply_coupons(cart, coupons)
     end 
     cart_index += 1
   end
-  puts coupon_cart
   coupon_cart
 end
 
